@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https:www.thymeleaf.org" 
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:sec="http://www.thymeleaf.org/extras/apring-security">    
+    <head>
+        <title>Botones Agregar</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" sec:authorize="hasRole('ROLE_ADMIN_test')">
+                        <div>
+                            <a href="#" style="background-color:#6c757d;" class="btn btn-outline-light btn-block"
+                               data-toggle="modal" data-target="#agregarCliente">
+                                <i class="fas fa-user-plus"></i> [[#{accion.agregar}]]
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+        
+        </section>
+    </body>
+</html>
